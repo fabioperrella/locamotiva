@@ -5,7 +5,8 @@ gem 'rails', '3.1.0'
 # Bundle edge Rails instead:
 # gem 'rails',     :git => 'git://github.com/rails/rails.git'
 
-gem 'sqlite3'
+gem 'mysql2'
+gem 'activeadmin'
 
 
 # Gems used only for assets and not required
@@ -18,16 +19,18 @@ end
 
 gem 'jquery-rails'
 
-# Use unicorn as the web server
-# gem 'unicorn'
-
-# Deploy with Capistrano
-# gem 'capistrano'
-
-# To use debugger
-# gem 'ruby-debug19', :require => 'ruby-debug'
-
-group :test do
-  # Pretty printed test output
+group :development, :test do
+  gem "letter_opener"
+  gem 'pry'
+  gem 'thin'
+  gem 'rspec-rails'
+  gem 'factory_girl_rails'
+  gem 'fakeweb-matcher'
+  gem 'shoulda-matchers'
+  gem 'database_cleaner'
+  # performance
+  gem 'spork', '~> 0.9.0.rc'
+  gem "guard-rspec"
+  gem "guard-livereload"
   gem 'turn', :require => false
 end
