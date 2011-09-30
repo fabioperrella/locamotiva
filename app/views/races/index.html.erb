@@ -1,0 +1,33 @@
+<h1>Listing races</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Stage</th>
+    <th>Race date</th>
+    <th>Place</th>
+    <th>Distance</th>
+    <th>Url</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @races.each do |race| %>
+  <tr>
+    <td><%= race.name %></td>
+    <td><%= race.stage %></td>
+    <td><%= race.race_date %></td>
+    <td><%= race.place %></td>
+    <td><%= race.distance %></td>
+    <td><%= race.url %></td>
+    <td><%= link_to 'Show', race %></td>
+    <td><%= link_to 'Edit', edit_race_path(race) %></td>
+    <td><%= link_to 'Destroy', race, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Race', new_race_path %>

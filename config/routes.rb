@@ -1,4 +1,6 @@
 Locamotiva::Application.routes.draw do
+  resources :races
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
