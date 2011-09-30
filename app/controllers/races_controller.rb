@@ -9,7 +9,7 @@ class RacesController < ApplicationController
       format.json { render json: @races }
     end
   end
-
+  
   # GET /races/1
   # GET /races/1.json
   def show

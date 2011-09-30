@@ -31,6 +31,7 @@ group :development, :test do
   # performance
   gem 'spork', '~> 0.9.0.rc'
   gem "guard-rspec"
+  gem "guard-spork"
   gem "guard-livereload"
   gem 'turn', :require => false
 end
