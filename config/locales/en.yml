@@ -3,3 +3,8 @@
 
 en:
   hello: "Hello world"
+  activerecord:
+    models:
+      race: "Corridaa"
+    attributes:
+      name: "Nome"
