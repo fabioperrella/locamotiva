@@ -1,2 +1,9 @@
 #precisa instalar o nodejs
 sudo apt-get install nodejs
+
+Acesso ao admin
+http://localhost:3000/admin/login
+admin@example.com
+password
+
+
