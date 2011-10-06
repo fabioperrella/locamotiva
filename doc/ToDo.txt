@@ -1,0 +1,14 @@
+Todo:
+
+Usuarios:
+- cadastro de usuarios (admins e corredores)
+- desistencia de corrida, e enviar email para os que estao na fila sobre nova vaga
+
+Corridas
+- cadastro de corridas
+- envio de email avisando nova corrida aos corredores
+- envio de email confirmando inscritos na corrida
+- pagina mostrando inscritos e fila de espera de corrida
+- calendario de corridas
+- votacao das corridas do proximo mes
+- sugestao de corrida por usuario
