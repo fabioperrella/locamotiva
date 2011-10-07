@@ -34,4 +34,5 @@ group :development, :test do
   gem "guard-spork"
   gem "guard-livereload"
   gem 'turn', :require => false
+  gem "libnotify"
 end
