@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110930022417) do
+ActiveRecord::Schema.define(:version => 20111007120339) do
 
   create_table "active_admin_comments", :force => true do |t|
     t.integer  "resource_id",   :null => false
@@ -28,7 +28,18 @@ ActiveRecord::Schema.define(:version => 20110930022417) do
   add_index "active_admin_comments", ["namespace"], :name => "index_active_admin_comments_on_namespace"
   add_index "active_admin_comments", ["resource_type", "resource_id"], :name => "index_admin_notes_on_resource_type_and_resource_id"
 
-  create_table "admin_users", :force => true do |t|
+  create_table "races", :force => true do |t|
+    t.string   "name"
+    t.string   "stage"
+    t.datetime "race_date"
+    t.string   "place"
+    t.string   "distance"
+    t.string   "url"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "users", :force => true do |t|
     t.string   "email",                                 :default => "", :null => false
     t.string   "encrypted_password",     :limit => 128, :default => "", :null => false
     t.string   "reset_password_token"
@@ -43,18 +54,7 @@ ActiveRecord::Schema.define(:version => 20110930022417) do
     t.datetime "updated_at"
   end
 
-  add_index "admin_users", ["email"], :name => "index_admin_users_on_email", :unique => true
-  add_index "admin_users", ["reset_password_token"], :name => "index_admin_users_on_reset_password_token", :unique => true
-
-  create_table "races", :force => true do |t|
-    t.string   "name"
-    t.string   "stage"
-    t.datetime "race_date"
-    t.string   "place"
-    t.string   "distance"
-    t.string   "url"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
+  add_index "users", ["email"], :name => "index_admin_users_on_email", :unique => true
+  add_index "users", ["reset_password_token"], :name => "index_admin_users_on_reset_password_token", :unique => true
 
 end
