@@ -14,6 +14,7 @@ ActiveAdmin.register User do
       f.input :department
       f.input :cpf
       f.input :born_at
+      f.input :role, :as => :select, :collection => ["corredor","admin"], :selected => "corredor", :include_blank => false
     end
     f.buttons
   end
