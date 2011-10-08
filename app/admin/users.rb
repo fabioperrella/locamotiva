@@ -13,7 +13,7 @@ ActiveAdmin.register User do
       f.input :shirt_size, :as => :select, :collection => ["Baby Look","P", "M", "G", "GG"]
       f.input :department
       f.input :cpf
-      f.input :born_at
+      f.input :birth_date
       f.input :role, :as => :select, :collection => ["corredor","admin"], :selected => "corredor", :include_blank => false
       f.input :password, :as => :password, :input_html => {:autocomplete => "off"}
       f.input :password_confirmation, :as => :password
