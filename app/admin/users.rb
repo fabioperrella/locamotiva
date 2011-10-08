@@ -10,7 +10,7 @@ ActiveAdmin.register User do
     f.inputs "Details" do
       f.input :name
       f.input :email
-      f.input :shirt_size, :as => :select, :collection => ["P", "M", "G"]
+      f.input :shirt_size, :as => :select, :collection => ["Baby Look","P", "M", "G", "GG"]
       f.input :department
       f.input :cpf
       f.input :born_at
