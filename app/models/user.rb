@@ -5,7 +5,8 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
 
   # Setup accessible (or protected) attributes for your model
-  attr_accessible :email, :password, :password_confirmation, :remember_me, :name, :cpf, :role, :shirt_size, :department, :birth_date
+  attr_accessible :email, :password, :password_confirmation, :remember_me, 
+                  :name, :cpf, :role, :shirt_size, :department, :birth_date
 
   validates_presence_of :email
   validates_presence_of :name
@@ -13,4 +14,9 @@ class User < ActiveRecord::Base
   validates_presence_of :role
   validates_numericality_of :cpf
   validates_size_of :cpf, :is => 11
+
+  before_validation(:on => :create) do
+    self.password = "inicial1234"
+    self.password_confirmation = "inicial1234"
+  end
 end

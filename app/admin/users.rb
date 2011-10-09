@@ -3,7 +3,8 @@ ActiveAdmin.register User do
     column :name
     column :email
     column :shirt_size
-    column :department
+    column :department    
+    default_actions
   end
 
   form do |f|
@@ -15,8 +16,6 @@ ActiveAdmin.register User do
       f.input :cpf
       f.input :birth_date
       f.input :role, :as => :select, :collection => ["corredor","admin"], :selected => "corredor", :include_blank => false
-      f.input :password, :as => :password, :input_html => {:autocomplete => "off"}
-      f.input :password_confirmation, :as => :password
     end
     f.buttons
   end
