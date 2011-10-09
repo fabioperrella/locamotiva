@@ -1,3 +1,24 @@
-// Place all the styles related to the Races controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+/*date with images*/
+.date_box { float:left; font-size:11px; font-weight:bold;  margin:0 12px 5px 0; text-align:center; width:77px;}
+.date_box .date { -moz-background-clip:border; -moz-background-inline-policy:continuous; -moz-background-origin:padding;
+  background:transparent url(date_box-black-bg.png) no-repeat scroll left top; color:white; margin:0; padding:4px 0;}
+.date_box .date .big_date { color:#FFF; display:block; font-size:20px; margin:0; padding:0;} /* color:#FFDD41; color:#FFAA06;*/ 
+.date_box .countdown { -moz-background-clip:border; -moz-background-inline-policy:continuous; -moz-background-origin:padding;font-size:18px;
+  background:transparent url(date_box-orange-bg.png) no-repeat scroll left bottom; color:white; padding:0px 0 3px;
+  letter-spacing: 1px;}
+
+/*Races*/
+#race_name_front { float:left; padding-top:20px; text-decoration: none;}
+#race_distance_front { float:left; padding-top:20px; padding-left:20px; color:black;}
+.race, td { color: gray; font-size: 20px; padding: 0 5px 5px 5px; clear: both;}
+.race_black td { color: black;}
+.race_title { color:#EA5D0F; font-weight:normal; font-size:180%; float:left; padding-top:20px; margin:2px 0 15px;}
+  .race_title a { color:#EA5D0F; text-decoration: none;}
+  .race_title a:visited { color:#EA5D0F; text-decoration: none;}
+  .race_title a:hover {  color:#EA5D0F; text-decoration: none;}
+
+/*All project*/
+.centralize { text-align:center; width:1040px; margin:0 auto; min-height:400px;}
+.align_left{ text-align:left;}
+.align_right{ text-align:right; padding-left: 350px;}
+.black { color:black; padding-left: 20px;}

@@ -1,30 +1,18 @@
-<h1>Listing races</h1>
+<div class="centralize">
+  <br/>
+  <h1 class="align_left">Calendario de corridas</h1>
+  <br/>
+  <% for race in @races %>
+    <div class="date_box">
+      <div class="date">
+        <div class="big_date"><% if race.race_date %><%= race.race_date.strftime('%d') %><% end %></div>
+        <div class="big_date"><% if race.race_date %><%= race.race_date.strftime('%b') %><% end %></div>
+      </div>
+      <div class="countdown">20<% if race.race_date %><%= race.race_date.strftime('%y') %><% end %></div>
+    </div>
+    <div class='race_title'><%= link_to race.name, race.url %></div>
+    <div class='race_title black'><%= race.distance %></div>
+    <div style="clear:left"></div>
+  <% end %>
+</div>
 
-<table>
-  <tr>
-    <th>Name</th>
-    <th>Stage</th>
-    <th>Race date</th>
-    <th>Place</th>
-    <th>Distance</th>
-    <th>Url</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
-
-<% @races.each do |race| %>
-  <tr>
-    <td><%= race.name %></td>
-    <td><%= race.stage %></td>
-    <td><%= race.race_date %></td>
-    <td><%= race.place %></td>
-    <td><%= race.distance %></td>
-    <td><%= race.url %></td>
-  </tr>
-<% end %>
-</table>
-
-<br />
-
-<%= link_to 'New Race', new_race_path %>
