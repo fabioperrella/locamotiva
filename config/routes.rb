@@ -5,6 +5,9 @@ Locamotiva::Application.routes.draw do
 
   resources :races
 
+  root :to => 'races#index'
+  match "/calendar" => "races#index"
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
