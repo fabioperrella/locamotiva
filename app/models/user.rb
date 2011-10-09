@@ -16,7 +16,7 @@ class User < ActiveRecord::Base
   validates_size_of :cpf, :is => 11
 
   before_validation(:on => :create) do
-    self.password = "inicial1234"
-    self.password_confirmation = "inicial1234"
+    self.password = AppConfig.default_password
+    self.password_confirmation = AppConfig.default_password
   end
 end
