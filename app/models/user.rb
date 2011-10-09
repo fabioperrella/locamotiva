@@ -12,6 +12,7 @@ class User < ActiveRecord::Base
   validates_presence_of :name
   validates_presence_of :cpf
   validates_presence_of :role
+  validates_presence_of :shirt_size
   validates_numericality_of :cpf
   validates_size_of :cpf, :is => 11
 
