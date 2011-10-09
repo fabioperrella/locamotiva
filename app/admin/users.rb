@@ -4,7 +4,11 @@ ActiveAdmin.register User do
     column :email
     column :shirt_size
     column :department    
-    default_actions
+    column "Actions" do |user|
+      links = link_to I18n.t('active_admin.edit'), edit_admin_user_path(user), :class => "member_link edit_link"
+      links += link_to I18n.t('active_admin.delete'), admin_user_path(user), :method => :delete, :confirm => I18n.t('active_admin.delete_confirmation'), :class => "member_link delete_link"
+      links
+    end
   end
 
   form do |f|
