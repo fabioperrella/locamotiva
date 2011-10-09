@@ -1,4 +1,10 @@
 ActiveAdmin.register User do
+
+  filter :email
+  filter :name
+  filter :department
+  filter :cpf
+
   index do
     column :name
     column :email
