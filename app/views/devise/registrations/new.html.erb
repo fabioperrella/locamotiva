@@ -1,25 +1,53 @@
-<h2>Sign up</h2>
+<div id="sign_up_box">
+  <h2><%=t :sign_up%></h2>
 
-<%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
-  <%= devise_error_messages! %>
+  <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
+    <%= devise_error_messages! %>
 
-  <div><%= f.label :email %><br />
-  <%= f.email_field :email %></div>
+    <div>
+      <%= f.label :email %><br />
+      <%= f.email_field :email %>
+    </div>
 
-  <div><%= f.label :name %><br />
-  <%= f.text_field :name %></div>
+    <div>
+      <%= f.label :name %><br />
+      <%= f.text_field :name %>
+    </div>
 
-  <div><%= f.label :cpf %><br />
-  <%= f.text_field :cpf %></div>
+    <div>
+      <%= f.label :cpf %><br />
+      <%= f.text_field :cpf %>
+    </div>
 
+    <div>
+      <%= f.label :shirt_size %><br />
+      <%= f.select :shirt_size, AppConfig.shirt_sizes, :include_blank => true %>
+    </div>
 
-  <div><%= f.label :password %><br />
-  <%= f.password_field :password %></div>
+    <div>
+      <%= f.label :department %><br />
+      <%= f.text_field :department %>
+    </div>
 
-  <div><%= f.label :password_confirmation %><br />
-  <%= f.password_field :password_confirmation %></div>
+    <div>
+      <%= f.label :birth_date %><br />
+      <%= f.date_select :birth_date, :start_year => 1960 %>
+    </div>
 
-  <div><%= f.submit "Sign up" %></div>
-<% end %>
+    <div>
+      <%= f.label :password %><br />
+      <%= f.password_field :password, :autocomplete => "off" %>
+    </div>
+
+    <div>
+      <%= f.label :password_confirmation %><br />
+      <%= f.password_field :password_confirmation %>
+    </div>
+
+    <div>
+      <%= f.submit t(:send) %>
+    </send>
+  <% end %>
+</div>
 
 <%= render :partial => "devise/shared/links" %>

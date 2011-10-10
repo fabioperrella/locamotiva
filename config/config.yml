@@ -1,5 +1,6 @@
 defaults: &defaults
-  default_password: 'inicial1234'
+  default_password: "inicial1234"
+  shirt_sizes: ["Baby Look", "P", "M", "G", "GG"]
 
 development:
   <<: *defaults

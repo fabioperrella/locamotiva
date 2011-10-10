@@ -2,6 +2,9 @@
 # pt-BR translations for Ruby on Rails
 'pt-BR':
 
+  sign_up: 'Cadastro'
+  send: "Enviar"
+
   attributes:
     cod_provisioning: 'cod_provisioning'
     client_login: 'cliente'
