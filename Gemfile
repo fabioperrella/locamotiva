@@ -21,7 +21,7 @@ gem 'jquery-rails'
 
 group :development, :test do
   gem "letter_opener"
-  gem 'pry'
+  gem 'ruby-debug19'
   gem 'thin'
   gem 'rspec-rails'
   gem 'factory_girl_rails'

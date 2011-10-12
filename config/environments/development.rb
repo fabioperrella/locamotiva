@@ -36,11 +36,3 @@ end
 # gem 'pry'
 #
 # to your Gemfile and run bundle to install.
-
-silence_warnings do
-  begin
-    require 'pry'
-    IRB = Pry
-  rescue LoadError
-  end
-end
