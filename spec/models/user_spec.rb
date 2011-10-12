@@ -14,5 +14,10 @@ describe User do
       user = FactoryGirl.create :user
       user.password.should == "inicial1234"
     end
+    it "should set default role as user" do
+      u = User.new
+      u.save
+      u.role.should == "user"
+    end
   end
 end
