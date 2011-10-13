@@ -12,10 +12,11 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable, :registerable
 
   # Setup accessible (or protected) attributes for your model
-  attr_accessible :email, :password, :password_confirmation, :remember_me, 
+  attr_accessible :email, :password, :password_confirmation, :remember_me,
                   :name, :cpf, :role, :shirt_size, :department, :birth_date
 
-  ROLES = %w(admin user)
+  # os usuarios com mais privilegios devem ficar a direita
+  ROLES = %w(user admin)
 
   validates_presence_of :email
   validates_presence_of :name
@@ -28,12 +29,12 @@ class User < ActiveRecord::Base
   after_initialize :init
 
   def role?(base_role)
-    return false unless role # A user have a role attribute. If not set, the user does not have any roles.
+    return false if role.blank? # A user have a role attribute. If not set, the user does not have any roles.
     ROLES.index(base_role.to_s) <= ROLES.index(role)
   end
 
   private
-   
+
   def init
     self.role ||= "user"
   end

@@ -9,6 +9,7 @@ gem 'mysql2'
 gem 'settingslogic'
 
 gem "devise"
+gem "cancan"
 
 gem 'fastercsv' # Only required on Ruby 1.8 and below
 gem 'rails_admin', :git => 'git://github.com/sferik/rails_admin.git'
