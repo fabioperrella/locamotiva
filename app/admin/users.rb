@@ -1,5 +1,7 @@
 ActiveAdmin.register User do
 
+  controller.authorize_resource
+
   filter :email
   filter :name
   filter :department
