@@ -16,18 +16,9 @@ class User < ActiveRecord::Base
   validates_numericality_of :cpf
   validates_size_of :cpf, :is => 11
 
-  before_validation(:on => :create) do
-    set_default_password
-  end
-
   after_initialize :init
 
   private
-
-  def set_default_password
-    self.password = AppConfig.default_password
-    self.password_confirmation = AppConfig.default_password
-  end
    
   def init
     self.role ||= "user"

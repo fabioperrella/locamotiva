@@ -10,10 +10,6 @@ describe User do
   it { should ensure_length_of(:cpf).is_equal_to(11) }
 
   describe ".create" do
-    it "should set the default password" do
-      user = FactoryGirl.create :user
-      user.password.should == "inicial1234"
-    end
     it "should set default role as user" do
       u = User.new
       u.save

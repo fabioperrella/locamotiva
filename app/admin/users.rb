@@ -25,7 +25,7 @@ ActiveAdmin.register User do
       f.input :shirt_size, :as => :select, :collection => AppConfig.shirt_sizes
       f.input :department
       f.input :cpf
-      f.input :birth_date, :start_year => 1960
+      f.input :birth_date, :start_year => 1960, :include_blank => true
       f.input :role, :as => :select, :collection => ["user","admin"], :selected => "user", :include_blank => false
     end
     f.buttons
