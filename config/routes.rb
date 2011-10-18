@@ -3,10 +3,7 @@ Locamotiva::Application.routes.draw do
   mount RailsAdmin::Engine => '/admin', :as => 'rails_admin'
 
   devise_for :users, :controllers => { :sessions => "sessions" }
-
-  devise_scope :user do
-    get "sign_in", :to => "devise/sessions#new"
-  end
+  #TODO: arrumar rota para /admin pois nao esta funcionando
 
   resources :races
 
