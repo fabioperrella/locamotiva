@@ -13,5 +13,6 @@ FactoryGirl.define do
     cpf 20401540871
     role "admin"
     shirt_size "P"
+    password "inicial1234"
   end
 end
