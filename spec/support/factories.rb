@@ -15,4 +15,9 @@ FactoryGirl.define do
     shirt_size "P"
     password "inicial1234"
   end
+
+  factory :race do
+    name "lala"
+    race_date Time.now
+  end
 end

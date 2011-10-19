@@ -8,4 +8,10 @@ describe "Races" do
       response.status.should be(200)
     end
   end
+  describe "date format long" do
+    #se esse formato estiver errado, pode quebrar o datePicker na edicao/criacao de corridas
+    it "should have the format %e %B %Y" do
+      I18n.l(Date.parse("2011/01/10"), :format => :long).should == "10 Janeiro 2011"
+    end
+  end
 end
