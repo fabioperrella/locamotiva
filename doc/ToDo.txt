@@ -6,7 +6,6 @@ ok- cadastro de usuarios (admins e corredores)
 
 Corridas
 - cadastro de corridas
-- arrumar helper de seleção de data no cadastro de corrida, nao esta funcionando
 - envio de email avisando nova corrida aos corredores
 - envio de email confirmando inscritos na corrida
 - pagina mostrando inscritos e fila de espera de corrida
