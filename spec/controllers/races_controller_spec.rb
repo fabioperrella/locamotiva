@@ -3,7 +3,7 @@ require 'spec_helper'
 describe RacesController do
 
   def valid_attributes
-    {}
+    {:name => "aaaa"}
   end
 
   describe "GET index" do
