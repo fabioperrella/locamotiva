@@ -2,8 +2,10 @@
 # pt-BR translations for Ruby on Rails
 'pt-BR':
 
-  sign_up: 'Cadastro'
-  send: "Enviar"
+  sign_up: 'cadastro'
+  send: "enviar"
+  sign_in: "logar"
+  sign_out: "deslogar"
 
   attributes:
     cod_provisioning: 'cod_provisioning'

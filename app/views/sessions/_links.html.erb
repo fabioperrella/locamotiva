@@ -1,0 +1,9 @@
+<%- unless ['sessions','registrations'].include?(controller_name)  %>
+  <div id="login_logout">
+  <%- if current_user.nil? %>
+    <%= link_to t(:sign_in), new_user_session_path %>
+  <%- else %>
+    <%= link_to t(:sign_out), destroy_user_session_path, :method => :delete %>
+  <% end -%>
+  </div>
+<% end -%>

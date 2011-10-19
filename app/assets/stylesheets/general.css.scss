@@ -1,7 +1,17 @@
-div#sign_up_box{
-  width: 500px;
-  margin: 20px auto;
-  p {
-    margin: 8px 0;
+div{
+  &#sign_up_box{
+    width: 500px;
+    margin: 20px auto;
+    p {
+      margin: 8px 0;
+    }
+  }
+  &#app_feedback {
+    .notice{
+      color: green;
+    }
+    .alert{
+      color: red;
+    }
   }
 }
