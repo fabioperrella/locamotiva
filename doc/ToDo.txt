@@ -1,7 +1,7 @@
 Todo:
 
 Usuarios:
-- cadastro de usuarios (admins e corredores)
+ok- cadastro de usuarios (admins e corredores)
 - desistencia de corrida, e enviar email para os que estao na fila sobre nova vaga
 
 Corridas
