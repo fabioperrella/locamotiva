@@ -6,6 +6,7 @@ Locamotiva::Application.routes.draw do
   #TODO: arrumar rota para /admin pois nao esta funcionando
 
   resources :races
+  match "/subscriptions/:race_id" => "subscriptions#create", :as => "subscriptions", :via => :post
 
   root :to => 'races#index'
   match "/calendar" => "races#index"

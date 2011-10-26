@@ -13,7 +13,7 @@
     </td>    
     <% if current_user %>
     <td>
-      <%= t(:subscribe).downcase %>
+      <%= link_to t(:subscription).downcase, subscriptions_path(race), :method => :post %>
     </td>
     <% end %>
   </tr>

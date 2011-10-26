@@ -6,7 +6,8 @@
   send: "Enviar"
   sign_in: "Logar"
   sign_out: "Deslogar"
-  subscribe: "Inscrição"
+  subscription: "Inscrição"
+  subscription_saved_successfull: "Inscrição na corrida %{race_name} realizada com sucesso"
 
   attributes:
     email: 'email'
