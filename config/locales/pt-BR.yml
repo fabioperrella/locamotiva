@@ -6,6 +6,7 @@
   send: "Enviar"
   sign_in: "Logar"
   sign_out: "Deslogar"
+  subscribe: "Inscrição"
 
   attributes:
     email: 'email'

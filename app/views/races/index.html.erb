@@ -10,7 +10,12 @@
     </td>
     <td>
       <%= race.distance %>
+    </td>    
+    <% if current_user %>
+    <td>
+      <%= t(:subscribe).downcase %>
     </td>
+    <% end %>
   </tr>
 <% end %>
 </table>
