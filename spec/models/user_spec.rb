@@ -9,6 +9,9 @@ describe User do
   it { should validate_numericality_of(:cpf) }
   it { should ensure_length_of(:cpf).is_equal_to(11) }
 
+  it { should have_many(:races).through(:subscriptions) }
+  it { should have_many(:subscriptions) }
+
   describe ".create" do
     it "should set default role as user" do
       u = User.new
