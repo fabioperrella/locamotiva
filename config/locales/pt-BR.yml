@@ -7,7 +7,10 @@
   sign_in: "Logar"
   sign_out: "Deslogar"
   subscription: "Inscrição"
+  do_subscription:  "Fazer inscrição"
   subscription_saved_successfull: "Inscrição na corrida %{race_name} realizada com sucesso"
+  subscription_destroyed_successfull: "Cancelada inscrição na corrida %{race_name}"
+  unsubscribe: "Cancelar inscrição"
 
   attributes:
     email: 'email'

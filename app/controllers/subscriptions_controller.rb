@@ -11,4 +11,10 @@ class SubscriptionsController < ApplicationController
 
     redirect_to races_path
   end
+
+  def destroy
+    subscription = current_user.subscriptions.find_by_race_id params[:race_id]
+    subscription.destroy
+    redirect_to races_path, :notice => I18n.t(:subscription_destroyed_successfull, :race_name => subscription.race.name)
+  end
 end

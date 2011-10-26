@@ -7,6 +7,7 @@ Locamotiva::Application.routes.draw do
 
   resources :races
   match "/subscriptions/:race_id" => "subscriptions#create", :as => "subscriptions", :via => :post
+  match "/subscriptions/:race_id" => "subscriptions#destroy", :as => "subscriptions", :via => :delete
 
   root :to => 'races#index'
   match "/calendar" => "races#index"

@@ -20,4 +20,9 @@ FactoryGirl.define do
     name "lala"
     race_date Time.now
   end
+
+  factory :subscription do
+    race { FactoryGirl.create(:race) }
+    user { FactoryGirl.create(:user) }
+  end
 end
