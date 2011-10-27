@@ -6,4 +6,5 @@ http://localhost:3000/admin/login
 admin@example.com
 password
 
-
+#problemas conhecidos
+Ao gerar uma migration ou rodar uma migration, pode dar erro por causa do rails_admin, para que nao ocorra, renomear o arquivo config/initializers/rails_admin.rb para config/initializers/rails_admin.rb.dis quando for rodar alguma migration
