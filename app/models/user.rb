@@ -29,6 +29,7 @@ class User < ActiveRecord::Base
   validates_presence_of :shirt_size
   validates_numericality_of :cpf
   validates_size_of :cpf, :is => 11
+  validates_format_of :email, :with => /@#{AppConfig.user_allowed_domain_for_email}$/i, :message => I18n.t(:must_be_from_domain, :domain => AppConfig.user_allowed_domain_for_email)
 
   after_initialize :init
 

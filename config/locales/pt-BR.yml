@@ -11,6 +11,7 @@
   subscription_saved_successfull: "Inscrição na corrida %{race_name} realizada com sucesso"
   subscription_destroyed_successfull: "Cancelada inscrição na corrida %{race_name}"
   unsubscribe: "Cancelar inscrição"
+  must_be_from_domain: "deve ser do domínio %{domain}"
 
   attributes:
     email: 'email'

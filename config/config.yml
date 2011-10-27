@@ -1,6 +1,7 @@
 defaults: &defaults
   default_password: "inicial1234"
   shirt_sizes: ["Baby Look", "P", "M", "G", "GG"]
+  user_allowed_domain_for_email: "locaweb.com.br"
 
 development:
   <<: *defaults

@@ -12,6 +12,19 @@ describe User do
   it { should have_many(:races).through(:subscriptions) }
   it { should have_many(:subscriptions) }
 
+  describe "validations" do
+    describe "email validation" do
+      it "does not accept external domains" do
+        u = FactoryGirl.build :user, :email => 'aaa@gmail.com'
+        u.valid?.should be_false
+      end
+      it "accept internal domain" do
+        u = FactoryGirl.build :user, :email => 'aaa@locaweb.com.br'
+        u.valid?.should be_true
+      end
+    end
+  end
+
   describe ".create" do
     it "should set default role as user" do
       u = User.new

@@ -1,6 +1,6 @@
 FactoryGirl.define do
   sequence :email do |n|
-    "aa#{n}@domain.com"
+    "aa#{n}@locaweb.com.br"
   end
 
   sequence :name do |n|
