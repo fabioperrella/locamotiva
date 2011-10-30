@@ -13,15 +13,34 @@ describe SubscriptionsController do
     end
 
     describe "POST create" do
+      it "sets shirt_size as the shirt size of logged user" do
+        post :create, { :race_id => @race }
+
+        Subscription.first.shirt_size.should == @user.shirt_size
+      end
+
       it "creates a subscription with a race" do
-        post :create, { :race_id => @race, :shirt_size => @user.shirt_size }
+        post :create, { :race_id => @race }
 
         subscription = Subscription.first
         subscription.race.should == @race
         subscription.user.should == @user
       end
 
+      it "assigns subscription" do
+        post :create, { :race_id => @race }
+        assigns[:subscription].should == Subscription.first
+      end
+
+      it "renders confirmation page" do
+        post :create, { :race_id => @race }
+        response.should render_template("subscriptions/confirm")
+      end
+    end
+
+    describe "GET confirm" do
       it "flashes confimation notice" do
+        pending
         post :create, { :race_id => @race, :shirt_size => @user.shirt_size }
         flash[:notice].should_not be_nil
       end

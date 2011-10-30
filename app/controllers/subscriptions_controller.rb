@@ -1,12 +1,14 @@
 class SubscriptionsController < ApplicationController
   def create
     @race = Race.find(params[:race_id])
-    subscription = Subscription.new(:user => current_user, :race => @race, :shirt_size => params[:shirt_size])
+    @subscription = Subscription.new(:user => current_user, :race => @race, :shirt_size => current_user.shirt_size)
 
-    if subscription.save
-      flash[:notice] = I18n.t(:subscription_saved_successfull, :race_name => @race.name)
+    if @subscription.save
+      render "confirm"
+      return
+      #flash[:notice] = I18n.t(:subscription_saved_successfull, :race_name => @race.name)
     else
-      flash[:alert] = subscription.errors.full_messages
+      flash[:alert] = @subscription.errors.full_messages
     end
 
     redirect_to races_path
