@@ -14,7 +14,7 @@ describe SubscriptionsController do
 
     describe "POST create" do
       it "creates a subscription with a race" do
-        post :create, { :race_id => @race }
+        post :create, { :race_id => @race, :shirt_size => @user.shirt_size }
 
         subscription = Subscription.first
         subscription.race.should == @race
@@ -22,7 +22,7 @@ describe SubscriptionsController do
       end
 
       it "flashes confimation notice" do
-        post :create, { :race_id => @race }
+        post :create, { :race_id => @race, :shirt_size => @user.shirt_size }
         flash[:notice].should_not be_nil
       end
     end

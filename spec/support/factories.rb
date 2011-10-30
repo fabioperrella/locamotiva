@@ -24,5 +24,6 @@ FactoryGirl.define do
   factory :subscription do
     race { FactoryGirl.create(:race) }
     user { FactoryGirl.create(:user) }
+    shirt_size "P"
   end
 end
