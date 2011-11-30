@@ -12,36 +12,23 @@ describe SubscriptionsController do
       sign_in :user, @user
     end
 
-    describe "POST create" do
+    describe "GET new" do
       it "sets shirt_size as the shirt size of logged user" do
-        post :create, { :race_id => @race }
+        get :new, { :race_id => @race }
 
-        Subscription.first.shirt_size.should == @user.shirt_size
+        assigns[:subscription].shirt_size.should == @user.shirt_size
       end
 
-      it "creates a subscription with a race" do
-        post :create, { :race_id => @race }
-
-        subscription = Subscription.first
-        subscription.race.should == @race
-        subscription.user.should == @user
-      end
-
-      it "assigns subscription" do
-        post :create, { :race_id => @race }
-        assigns[:subscription].should == Subscription.first
-      end
-
-      it "renders confirmation page" do
-        post :create, { :race_id => @race }
-        response.should render_template("subscriptions/confirm")
+      it "renders new layout" do
+        get :new, { :race_id => @race }
+        response.should render_template("subscriptions/new")
       end
     end
 
     describe "GET confirm" do
       it "flashes confimation notice" do
         pending
-        post :create, { :race_id => @race, :shirt_size => @user.shirt_size }
+        get :new, { :race_id => @race, :shirt_size => @user.shirt_size }
         flash[:notice].should_not be_nil
       end
     end
@@ -52,6 +39,16 @@ describe SubscriptionsController do
         delete :destroy, { :race_id => @race.id }
         Subscription.find_by_race_id_and_user_id(@race,@user).should be_nil
       end
+    end
+
+    describe "POST create" do
+      # it "creates a subscription with a race" do
+      #   get :new, { :race_id => @race }
+
+      #   subscription = Subscription.first
+      #   subscription.race.should == @race
+      #   subscription.user.should == @user
+      # end
     end
   end
 end

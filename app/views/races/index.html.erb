@@ -14,9 +14,9 @@
     <% if current_user %>
     <td>
       <% if !current_user.races.include?(race) %>
-        <%= link_to t(:do_subscription).downcase, subscriptions_path(race), :method => :post %>
+        <%= link_to t(:do_subscription).downcase, new_race_subscriptions_path(race) %>
       <% else %>
-        <%= link_to t(:unsubscribe).downcase, subscriptions_path(race), :method => :delete %>
+        <%= link_to t(:unsubscribe).downcase, race_subscriptions_path(race), :method => :delete %>
       <% end %>
     </td>
     <% end %>

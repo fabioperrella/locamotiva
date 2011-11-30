@@ -1,0 +1,14 @@
+<p>
+<%= t(:confirm_subscription?) %>
+</p>
+<%= form_for @subscription, :url => race_subscriptions_url do |f| %>
+<p>
+  <%= t(:race)%>: <%= @subscription.race.name %>
+</p>
+<p>
+  <%= t(:shirt_size)%>: <%= f.select(:shirt_size, AppConfig.shirt_sizes) %>
+</p>
+<p>
+  <%= f.submit t(:confirm) %>
+</p>
+<% end %>
