@@ -17,7 +17,7 @@
     email: 'email'
     stage: "Etapa"
     name: "Nome"
-    race_date: "Data da corrida"
+    date: "Data"
     place: "Local"
     distance: "Distância"
 

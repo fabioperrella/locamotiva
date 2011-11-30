@@ -9,6 +9,7 @@ Corridas
 - envio de email avisando nova corrida aos corredores
 - envio de email confirmando inscritos na corrida
 - pagina mostrando inscritos e fila de espera de corrida
+- link de corridas que ja foram
 
 Calendario
 - calendario de corridas

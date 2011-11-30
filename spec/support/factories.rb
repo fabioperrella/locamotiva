@@ -18,7 +18,7 @@ FactoryGirl.define do
 
   factory :race do
     name "lala"
-    race_date Time.now
+    date Time.now
   end
 
   factory :subscription do

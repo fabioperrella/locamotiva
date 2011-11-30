@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111027114403) do
+ActiveRecord::Schema.define(:version => 20111130092211) do
 
   create_table "active_admin_comments", :force => true do |t|
     t.integer  "resource_id",   :null => false
@@ -31,7 +31,7 @@ ActiveRecord::Schema.define(:version => 20111027114403) do
   create_table "races", :force => true do |t|
     t.string   "name"
     t.string   "stage"
-    t.datetime "race_date"
+    t.datetime "date"
     t.string   "place"
     t.string   "distance"
     t.string   "url"

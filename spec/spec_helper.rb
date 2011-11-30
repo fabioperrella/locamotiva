@@ -1,6 +1,11 @@
 require 'rubygems'
 require 'spork'
 
+Spork.each_run do
+  #FactoryGirl.reload
+  I18n.backend.reload!
+end
+
 Spork.prefork do
   # This file is copied to spec/ when you run 'rails generate rspec:install'
   ENV["RAILS_ENV"] ||= 'test'

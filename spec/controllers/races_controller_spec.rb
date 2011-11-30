@@ -7,10 +7,13 @@ describe RacesController do
   end
 
   describe "GET index" do
-    it "assigns all races as @races" do
+    it "assigns future races as @races, ordered by date" do
+      race1 = FactoryGirl.create :race, :date => Date.today - 1.hour
+      race2 = FactoryGirl.create :race, :date => Date.today
+      race3 = FactoryGirl.create :race, :date => Date.today + 1.day
       race = Race.create! valid_attributes
       get :index
-      assigns(:races).should eq([race])
+      assigns(:races).should eq([race2, race3])
     end
   end
 

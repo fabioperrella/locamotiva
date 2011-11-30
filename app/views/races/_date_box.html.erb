@@ -1,7 +1,7 @@
 <div class="date_box">
   <div class="date">
-    <div class="big_date"><% if race.race_date %><%= race.race_date.strftime('%d') %><% end %></div>
-    <div class="big_date"><% if race.race_date %><%= race.race_date.strftime('%b') %><% end %></div>
+    <div class="big_date"><% if race.date %><%= race.date.strftime('%d') %><% end %></div>
+    <div class="big_date"><% if race.date %><%= race.date.strftime('%b') %><% end %></div>
   </div>
-  <div class="countdown">20<% if race.race_date %><%= race.race_date.strftime('%y') %><% end %></div>
+  <div class="countdown">20<% if race.date %><%= race.date.strftime('%y') %><% end %></div>
 </div>
