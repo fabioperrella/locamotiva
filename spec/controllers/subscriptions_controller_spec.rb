@@ -42,13 +42,37 @@ describe SubscriptionsController do
     end
 
     describe "POST create" do
-      # it "creates a subscription with a race" do
-      #   get :new, { :race_id => @race }
+      it "creates a subscription to the race passed as param and current user" do
+        post :create, { :race_id => @race, :subscription => { :shirt_size => "P" } }
 
-      #   subscription = Subscription.first
-      #   subscription.race.should == @race
-      #   subscription.user.should == @user
-      # end
+        s = Subscription.first
+        s.race.should == @race
+        s.user.should == @user
+      end
+
+      context "when create successful" do
+        it "flash notice" do
+          post :create, { :race_id => @race, :subscription => { :shirt_size => "P" } }
+          flash[:notice].should_not be_nil
+        end
+
+        it "redirects to races index" do
+          post :create, { :race_id => @race, :subscription => { :shirt_size => "P" } }
+          response.should redirect_to(races_path)
+        end
+      end
+
+      context "when create fails" do
+        it "flash alert" do
+          post :create, { :race_id => @race, :subscription => nil }
+          flash[:alert].should_not be_nil
+        end
+
+        it "renders new template" do
+          post :create, { :race_id => @race, :subscription => nil }
+          response.should render_template("new")
+        end
+      end
     end
   end
 end
