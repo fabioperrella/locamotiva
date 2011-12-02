@@ -9,7 +9,7 @@ class SubscriptionsController < ApplicationController
     @subscription = race.subscriptions.new(params[:subscription])
     @subscription.user = current_user
     if @subscription.save
-      flash[:notice] = I18n.t(:subscription_saved_successfull, :race_name => @subscription.id)
+      flash[:notice] = I18n.t(:subscription_saved_successfull, :race_name => race.name)
       redirect_to race_subscriptions_path(race)
     else
       flash[:alert] = @subscription.errors.full_messages

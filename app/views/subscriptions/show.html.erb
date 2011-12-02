@@ -1,6 +1,12 @@
 <h2><%= t(:subscribed_users) %></h2>
-<% @subscriptions.each do |subscription| %>
-<p>
-  <%= subscription.user.name %> (<%= subscription.shirt_size %>)
-</p
+<% @subscriptions.each_with_index do |subscription, index| %>
+  <% if index == subscription.race.vacancies %>
+  <p>
+    ------- <%= t(:race_queue) %> ---------
+  </p>
+  <% end %>
+  <p>
+    <%= subscription.user.name %> (<%= subscription.shirt_size %>)
+  </p>
 <% end %>
+<%= link_to t(:back), root_path %>
