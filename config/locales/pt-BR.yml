@@ -7,6 +7,8 @@
   sign_in: "Logar"
   sign_out: "Deslogar"
   subscription: "Inscrição"
+  subscriptions: "Inscrições"
+  subscribed_users: "Usuários inscritos"
   do_subscription:  "Fazer inscrição"
   subscription_saved_successfull: "Inscrição na corrida %{race_name} realizada com sucesso"
   subscription_destroyed_successfull: "Cancelada inscrição na corrida %{race_name}"

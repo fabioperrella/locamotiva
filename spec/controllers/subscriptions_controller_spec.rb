@@ -32,10 +32,10 @@ describe SubscriptionsController do
         flash[:notice].should_not be_nil
       end
     end
-    
-    describe "DELETE destroy" do      
+
+    describe "DELETE destroy" do
       it "deletes a subscription" do
-        subscription = FactoryGirl.create :subscription, :user => @user, :race => @race 
+        subscription = FactoryGirl.create :subscription, :user => @user, :race => @race
         delete :destroy, { :race_id => @race.id }
         Subscription.find_by_race_id_and_user_id(@race,@user).should be_nil
       end
@@ -58,7 +58,7 @@ describe SubscriptionsController do
 
         it "redirects to races index" do
           post :create, { :race_id => @race, :subscription => { :shirt_size => "P" } }
-          response.should redirect_to(races_path)
+          response.should redirect_to(race_subscriptions_path(@race))
         end
       end
 
@@ -72,6 +72,17 @@ describe SubscriptionsController do
           post :create, { :race_id => @race, :subscription => nil }
           response.should render_template("new")
         end
+      end
+    end
+
+    describe "GET show" do
+      it "assigns subscriptions ordered by date" do
+        subscription1 = FactoryGirl.create :subscription, :race => @race
+        FactoryGirl.create :subscription, :race => FactoryGirl.create(:race)
+        subscription2 = FactoryGirl.create :subscription, :race => @race, :created_at => Date.yesterday
+
+        get :show, :race_id => @race.id
+        assigns(:subscriptions).should == [subscription2, subscription1]
       end
     end
   end

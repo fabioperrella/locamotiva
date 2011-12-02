@@ -3,7 +3,7 @@ require 'spork'
 
 Spork.each_run do
   #FactoryGirl.reload
-  I18n.backend.reload!
+  #I18n.backend.reload!
 end
 
 Spork.prefork do

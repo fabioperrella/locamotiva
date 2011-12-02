@@ -1,0 +1,6 @@
+<h2><%= t(:subscribed_users) %></h2>
+<% @subscriptions.each do |subscription| %>
+<p>
+  <%= subscription.user.name %> (<%= subscription.shirt_size %>)
+</p
+<% end %>

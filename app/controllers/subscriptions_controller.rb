@@ -10,7 +10,7 @@ class SubscriptionsController < ApplicationController
     @subscription.user = current_user
     if @subscription.save
       flash[:notice] = I18n.t(:subscription_saved_successfull, :race_name => @subscription.id)
-      redirect_to races_path
+      redirect_to race_subscriptions_path(race)
     else
       flash[:alert] = @subscription.errors.full_messages
       render :action => :new
@@ -21,5 +21,9 @@ class SubscriptionsController < ApplicationController
     subscription = current_user.subscriptions.find_by_race_id params[:race_id]
     subscription.destroy
     redirect_to races_path, :notice => I18n.t(:subscription_destroyed_successfull, :race_name => subscription.race.name)
+  end
+
+  def show
+    @subscriptions = Subscription.where(:race_id => params[:race_id]).order(:created_at)
   end
 end
