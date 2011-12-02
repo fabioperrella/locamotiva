@@ -2,17 +2,17 @@ Todo:
 
 Usuarios:
 ok- cadastro de usuarios (admins e corredores)
-- desistencia de corrida, e enviar email para os que estao na fila sobre nova vaga
+ainda nao- desistencia de corrida, e enviar email para os que estao na fila sobre nova vaga
 
 Corridas
-- cadastro de corridas
+ok- cadastro de corridas
 - envio de email avisando nova corrida aos corredores
-- envio de email confirmando inscritos na corrida
-- pagina mostrando inscritos e fila de espera de corrida
+ainda nao- envio de email confirmando inscritos na corrida
+ok - pagina mostrando inscritos e fila de espera de corrida
 - link de corridas que ja foram
 
 Calendario
-- calendario de corridas
+ok - calendario de corridas
 - votacao das corridas do proximo mes
 - sugestao de corrida por usuario
 
