@@ -9,6 +9,15 @@ class RacesController < ApplicationController
       format.json { render json: @races }
     end
   end
+
+  def index_old
+    @races = Race.where("date < :today", :today => Date.today).order(:date)
+
+    respond_to do |format|
+      format.html
+      format.json { render json: @races }
+    end
+  end
   
   # GET /races/1
   # GET /races/1.json

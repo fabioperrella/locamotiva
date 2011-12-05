@@ -18,6 +18,7 @@
   confirm: "Confirmar"
   race_queue: "Fila de espera"
   back: "Voltar"
+  old_races: "Corridas já realizadas"
 
   attributes:
     email: 'email'

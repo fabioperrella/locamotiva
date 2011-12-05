@@ -1,6 +1,5 @@
-<p>
-<%= t(:confirm_subscription?) %>
-</p>
+<h2><%= t(:subscription) %></h2>
+
 <%= form_for @subscription, :url => race_subscriptions_url do |f| %>
 <p>
   <%= t(:race)%>: <%= @subscription.race.name %>

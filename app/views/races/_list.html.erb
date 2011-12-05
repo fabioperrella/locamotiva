@@ -1,0 +1,27 @@
+<table class="table1">
+<% @races.each do |race| %>
+  <tr>
+    <td>
+      <%= render :partial => "date_box", :locals => { :race => race } %>
+    </td>
+    <td class='title'>
+      <%= link_to race.name, race.url, :target => "_blank" %>
+    </td>
+    <td>
+      <%= race.distance %>
+    </td>    
+    <% if current_user %>
+    <td>
+      <% if !current_user.races.include?(race) %>
+        <%= link_to t(:do_subscription).downcase, new_race_subscriptions_path(race) %>
+      <% else %>
+        <%= link_to t(:unsubscribe).downcase, race_subscriptions_path(race), :method => :delete %>
+      <% end %>
+    </td>
+    <td>
+      <%= link_to t(:show_subscriptions), race_subscriptions_path(race) %>
+    </td>
+    <% end %>
+  </tr>
+<% end %>
+</table>

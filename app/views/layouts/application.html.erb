@@ -7,11 +7,13 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+  
+  <%= render :partial => "sessions/links" %>
+  <h1><a href="/">Locamotiva</a></h1>
   <div id="app_feedback">
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
   </div>
-  <%= render :partial => "sessions/links" %>
 
 <%= yield %>
 
