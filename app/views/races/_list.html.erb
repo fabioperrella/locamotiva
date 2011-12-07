@@ -2,7 +2,7 @@
 <% @races.each do |race| %>
   <tr>
     <td>
-      <%= render :partial => "date_box", :locals => { :race => race } %>
+      <%= render :partial => "shared/date_box", :locals => { :race => race } %>
     </td>
     <td class='title'>
       <%= link_to race.name, race.url, :target => "_blank" %>

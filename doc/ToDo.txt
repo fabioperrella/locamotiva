@@ -9,7 +9,7 @@ ok- cadastro de corridas
 - envio de email avisando nova corrida aos corredores
 ainda nao- envio de email confirmando inscritos na corrida
 ok - pagina mostrando inscritos e fila de espera de corrida
-- link de corridas que ja foram
+ok - link de corridas que ja foram
 
 Calendario
 ok - calendario de corridas

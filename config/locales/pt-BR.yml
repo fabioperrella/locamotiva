@@ -19,6 +19,7 @@
   race_queue: "Fila de espera"
   back: "Voltar"
   old_races: "Corridas já realizadas"
+  voting_for_next_month_races: "Votação para corridas do próximo mês"
 
   attributes:
     email: 'email'
