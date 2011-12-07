@@ -7,7 +7,8 @@ describe RacesController do
   end
 
   describe "GET index" do
-    it "assigns future races as @races, ordered by date" do
+    it "assigns confirmed future races as @races, ordered by date" do
+      race1 = FactoryGirl.create :race, :date => Date.today, :confirmed => false
       race1 = FactoryGirl.create :race, :date => Date.today - 1.hour
       race2 = FactoryGirl.create :race, :date => Date.today
       race3 = FactoryGirl.create :race, :date => Date.today + 1.day
@@ -18,7 +19,8 @@ describe RacesController do
   end
 
   describe "GET index_old" do
-    it "assigns past races as @races, ordered by date" do
+    it "assigns confirmed past races as @races, ordered by date" do
+      racea = FactoryGirl.create :race, :date => Date.today - 1.day, :confirmed => false
       race0 = FactoryGirl.create :race, :date => Date.today - 1.day
       race1 = FactoryGirl.create :race, :date => Date.today - 2.day
       race2 = FactoryGirl.create :race, :date => Date.today

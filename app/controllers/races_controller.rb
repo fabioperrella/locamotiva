@@ -2,7 +2,7 @@ class RacesController < ApplicationController
   # GET /races
   # GET /races.json
   def index
-    @races = Race.where("date >= :today", :today => Date.today).order(:date)
+    @races = Race.confirmed.coming_next.order(:date)
 
     respond_to do |format|
       format.html # index.html.erb
@@ -11,7 +11,7 @@ class RacesController < ApplicationController
   end
 
   def index_old
-    @races = Race.where("date < :today", :today => Date.today).order(:date)
+    @races = Race.accomplished.order(:date)
 
     respond_to do |format|
       format.html
