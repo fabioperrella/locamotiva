@@ -26,7 +26,8 @@ end
 gem 'jquery-rails'
 
 group :development, :test do
-  gem 'ruby-debug19', :require => 'ruby-debug'
+  gem "pry"
+  gem "pry-nav"
   gem "letter_opener"  
   gem 'thin'
   gem 'rspec-rails'
