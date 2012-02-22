@@ -36,9 +36,7 @@ group :development, :test do
   gem 'shoulda-matchers'
   gem 'database_cleaner'
   # performance
-  gem 'spork', '~> 0.9.0.rc'
   gem "guard-rspec"
-  gem "guard-spork"
   gem "guard-livereload"
   gem 'turn', :require => false
   gem "libnotify"
