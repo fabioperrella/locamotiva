@@ -11,6 +11,7 @@ gem 'ffi'
 
 gem "devise"
 gem "cancan"
+gem "thin"
 
 gem 'fastercsv' # Only required on Ruby 1.8 and below
 gem 'rails_admin', :git => 'git://github.com/sferik/rails_admin.git'
