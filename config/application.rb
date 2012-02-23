@@ -47,5 +47,8 @@ module Locamotiva
     config.assets.version = '1.0'
 
     YAML::ENGINE.yamler = 'syck'
+
+    # prevent initializing application and connecting to the database
+    config.assets.initialize_on_precompile = false
   end
 end
