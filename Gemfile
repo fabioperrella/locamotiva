@@ -29,7 +29,7 @@ group :development, :test do
   gem "pry"
   gem "pry-nav"
   gem "letter_opener"  
-  gem 'thin'
+  #gem 'thin'
   gem 'rspec-rails'
   gem 'factory_girl_rails'
   gem 'fakeweb-matcher'
