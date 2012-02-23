@@ -30,9 +30,11 @@ Locamotiva::Application.configure do
 
   # Letter opner (open email in the browser)
   config.action_mailer.delivery_method = :letter_opener
+
+  # Raise exception on mass assignment protection for Active Record models
+  config.active_record.mass_assignment_sanitizer = :strict
+   
+  # Log the query plan for queries taking more than this (works
+  # with SQLite, MySQL, and PostgreSQL)
+  config.active_record.auto_explain_threshold_in_seconds = 0.5
 end
-# Add this to the end of your development.rb and add
-#
-# gem 'pry'
-#
-# to your Gemfile and run bundle to install.
