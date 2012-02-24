@@ -1,43 +1,18 @@
-<div id="sign_up_box">
-  <h2><%=t :sign_up%></h2>
-  <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
-    <%= devise_error_messages! %>
-    <p>
-      <%= f.label :email %><br />
-      <%= f.email_field :email %>
-    </p>
-    <p>
-      <%= f.label :name %><br />
-      <%= f.text_field :name %>
-    </p>
-    <p>
-      <%= f.label :cpf %><br />
-      <%= f.text_field :cpf, :class => "cpf" %>
-    </p>
-    <p>
-      <%= f.label :shirt_size %><br />
-      <%= f.select :shirt_size, AppConfig.shirt_sizes, :include_blank => true %>
-    </p>
-    <p>
-      <%= f.label :department %><br />
-      <%= f.text_field :department, :autocomplete => "off" %>
-    </p>
-    <p>
-      <%= f.label :birth_date %><br />
-      <%= f.date_select :birth_date, :start_year => 1960 %>
-    </p>
-    <p>
-      <%= f.label :password %><br />
-      <%= f.password_field :password, :autocomplete => "off" %>
-    </p>
-    <p>
-      <%= f.label :password_confirmation %><br />
-      <%= f.password_field :password_confirmation, :autocomplete => "off" %>
-    </p>
-    <p>
-      <%= f.submit t(:send) %>
-    </p>
-  <% end %>
-</div>
+<h2>Sign up</h2>
 
-<%= render :partial => "devise/shared/links" %>
+<%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
+  <%= devise_error_messages! %>
+
+  <div><%= f.label :email %><br />
+  <%= f.email_field :email %></div>
+
+  <div><%= f.label :password %><br />
+  <%= f.password_field :password %></div>
+
+  <div><%= f.label :password_confirmation %><br />
+  <%= f.password_field :password_confirmation %></div>
+
+  <div><%= f.submit "Sign up" %></div>
+<% end %>
+
+<%= render "links" %>
