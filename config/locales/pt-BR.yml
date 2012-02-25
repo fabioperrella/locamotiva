@@ -2,6 +2,7 @@
 # pt-BR translations for Ruby on Rails
 'pt-BR':
 
+  not_registered_sign_up_here: "Não tem cadastro? Cadastre-se aqui"
   sign_up: 'Cadastro'
   send: "Enviar"
   sign_in: "Logar"
