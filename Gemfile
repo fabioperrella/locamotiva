@@ -12,6 +12,7 @@ gem 'ffi'
 gem "devise"
 gem "cancan"
 gem "thin"
+gem "state_machine"
 
 gem 'fastercsv' # Only required on Ruby 1.8 and below
 gem 'rails_admin', :git => 'git://github.com/sferik/rails_admin.git'
@@ -29,7 +30,7 @@ gem 'jquery-rails'
 group :development, :test do
   gem "pry"
   gem "pry-nav"
-  gem "letter_opener"  
+  gem "letter_opener"
   #gem 'thin'
   gem 'rspec-rails'
   gem 'factory_girl_rails'
