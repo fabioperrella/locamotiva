@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe VotingController do
+describe VotesController do
   describe "GET index" do
     it "assigns races with races that will happen next month ordered by date" do
       race0 = FactoryGirl.create :race, :date => Date.today
