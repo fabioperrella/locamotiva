@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111207095805) do
+ActiveRecord::Schema.define(:version => 20120229232003) do
 
   create_table "admin_notes", :force => true do |t|
     t.integer  "resource_id",     :null => false
@@ -36,7 +36,7 @@ ActiveRecord::Schema.define(:version => 20111207095805) do
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
     t.integer  "vacancies"
-    t.boolean  "confirmed"
+    t.string   "state"
   end
 
   create_table "rails_admin_histories", :force => true do |t|

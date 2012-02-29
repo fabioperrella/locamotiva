@@ -19,7 +19,7 @@ FactoryGirl.define do
   factory :race do
     name "lala"
     date Time.now
-    confirmed { true }
+    state { :confirmed }
   end
 
   factory :subscription do
