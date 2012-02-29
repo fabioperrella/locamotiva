@@ -18,8 +18,11 @@ FactoryGirl.define do
 
   factory :race do
     name "lala"
-    date Time.now
+    date { Time.now }
     state { :confirmed }
+    url { "http://g1.com.br" }
+    distance { "10km" }
+    vacancies { 5 }
   end
 
   factory :subscription do
