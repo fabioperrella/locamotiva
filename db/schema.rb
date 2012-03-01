@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120229232003) do
+ActiveRecord::Schema.define(:version => 20120301000458) do
 
   create_table "admin_notes", :force => true do |t|
     t.integer  "resource_id",     :null => false
@@ -28,7 +28,6 @@ ActiveRecord::Schema.define(:version => 20120229232003) do
 
   create_table "races", :force => true do |t|
     t.string   "name"
-    t.string   "stage"
     t.datetime "date"
     t.string   "place"
     t.string   "distance"
