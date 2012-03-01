@@ -120,6 +120,17 @@ RailsAdmin.config do |config|
   #   end
   # end
 
+  config.model Race do
+    edit do
+      field :name
+      field :date
+      field :place
+      field :distance
+      field :url
+      field :vacancies
+    end
+  end
+
 end
 
 # para organizar melhor a configuracao dos modelos, colocar no dir app/admin
