@@ -7,15 +7,16 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-  
-  <%= render :partial => "devise/links" %>
-  <h1><a href="/">Locamotiva</a></h1>
-  <div id="app_feedback">
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
-  </div>
+  <div id="content">
+    <%= render :partial => "devise/links" %>
+    <h1><a href="/">Locamotiva</a></h1>
+    <div id="app_feedback">
+      <p class="notice"><%= notice %></p>
+      <p class="alert"><%= alert %></p>
+    </div>
+
 
 <%= yield %>
-
+  </div>
 </body>
 </html>

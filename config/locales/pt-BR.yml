@@ -2,6 +2,8 @@
 # pt-BR translations for Ruby on Rails
 'pt-BR':
 
+  vote: 'votar'
+  more_info: 'mais informações'
   not_registered_sign_up_here: "Não tem cadastro? Cadastre-se aqui"
   sign_up: 'Cadastro'
   send: "Enviar"
@@ -91,8 +93,8 @@
 
   time:
     formats:
-      default: "%A, %d de %B de %Y, %H:%M h"
-      short: "%d/%m, %H:%M h"
+      default: "%d/%b/%y, %H:%M"
+      short: "%d/%b %H:%M"
       long: "%A, %d de %B de %Y, %H:%M h"
     am: ''
     pm: ''

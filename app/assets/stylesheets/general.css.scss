@@ -19,17 +19,39 @@ table{
   &.table1{
     font-size: 20px;
     td.title{
-      color:#EA5D0F; 
-      font-size:30px; 
+      color:#EA5D0F;
+      font-size:30px;
     }
-  }  
+  }
 }
 
 /*date with images*/
 .date_box { float:left; font-size:11px; font-weight:bold;  margin:0 12px 5px 0; text-align:center; width:77px;}
 .date_box .date { -moz-background-clip:border; -moz-background-inline-policy:continuous; -moz-background-origin:padding;
   background:transparent url(date_box-black-bg.png) no-repeat scroll left top; color:white; margin:0; padding:4px 0;}
-.date_box .date .big_date { color:#FFF; display:block; font-size:20px; margin:0; padding:0;} /* color:#FFDD41; color:#FFAA06;*/ 
+.date_box .date .big_date { color:#FFF; display:block; font-size:20px; margin:0; padding:0;} /* color:#FFDD41; color:#FFAA06;*/
 .date_box .countdown { -moz-background-clip:border; -moz-background-inline-policy:continuous; -moz-background-origin:padding;font-size:18px;
   background:transparent url(date_box-orange-bg.png) no-repeat scroll left bottom; color:white; padding:0px 0 3px;
   letter-spacing: 1px;}
+
+#content{
+  width: 1000px;
+  margin: 0px auto;
+}
+
+#available_votes{
+  width: 100%;
+}
+#available_votes label{
+  width: 100px;
+}
+#available_votes .do_vote {
+  width: 100px;
+  height: 40px;
+  float: left;
+  border: 1px solid black;
+}
+
+.clr{
+  clear: both;
+}

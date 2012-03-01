@@ -1,5 +1,5 @@
 class Race < ActiveRecord::Base
-  validates_presence_of :name, :url, :vacancies, :date, :distance
+  validates_presence_of :name, :url, :vacancies, :date, :distance, :place
   validates_format_of :url, with: /^http:\/\//
 
   has_many :subscriptions
