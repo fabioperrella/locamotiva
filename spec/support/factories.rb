@@ -23,6 +23,7 @@ FactoryGirl.define do
     url { "http://g1.com.br" }
     distance { "10km" }
     vacancies { 5 }
+    place { "usp" }
   end
 
   factory :subscription do
