@@ -2,5 +2,6 @@
 <%= render 'list' %>
 <ul>
   <li><%= link_to t(:old_races), races_old_path %></li>
-  <li><%= link_to t(:voting_for_next_month_races), votes_path %></li>
+  <li><%= link_to t(:voting_for_month, month: l(Date.today + 1.month, format: :month)), votes_path %></li>
+  <li><%= link_to t(:voting_for_month, month: l(Date.today, format: :month)) + " (#{t(:closed)})", votes_path(month: Date.today.month, year: Date.today.year) %></li>
 </ul>

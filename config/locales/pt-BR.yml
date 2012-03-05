@@ -23,6 +23,7 @@
   back: "Voltar"
   old_races: "Corridas já realizadas"
   voting_for_month: "Votação para as corridas de %{month}"
+  closed: encerrado
 
   attributes:
     email: 'email'
