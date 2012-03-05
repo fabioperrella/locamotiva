@@ -5,6 +5,7 @@ Locamotiva::Application.routes.draw do
   devise_for :users, :controllers => { :sessions => "sessions" }
   #TODO: arrumar rota para /admin pois nao esta funcionando
 
+  match "/votes/:year/:month" => "votes#index"
   match "/votes" => "votes#index"
 
   match "/races/old" => "races#index_old"

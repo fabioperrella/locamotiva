@@ -22,7 +22,7 @@
   race_queue: "Fila de espera"
   back: "Voltar"
   old_races: "Corridas já realizadas"
-  voting_for_next_month_races: "Votação para corridas do próximo mês"
+  voting_for_month: "Votação para as corridas de %{month}"
 
   attributes:
     email: 'email'
@@ -39,6 +39,7 @@
     formats:
       default: "%d/%m/%Y"
       short: "%d de %B"
+      month: "%B de %Y"
       long: "%e %B %Y"
 
     day_names:

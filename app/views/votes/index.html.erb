@@ -1,4 +1,4 @@
-<h2><%= t(:voting_for_next_month_races) %></h2>
+<h2><%= t(:voting_for_month, month: l(@date_filter, format: :month))  %></h2>
 
 <div id="available_votes">
   <% @races.each do |race| %>
