@@ -3,9 +3,7 @@
 <div id="available_votes">
   <% @races.each do |race| %>
     <p>
-      <% if current_user %>
-         <%= link_to t(:vote), race_votes_path(race), method: :post %>
-      <% end %>
+      <%= link_to t(:vote), race_votes_path(race), method: :post if can_vote? %>
       <%= l(race.date, format: :short )%> - <%= race.place %> - <%= race.name %> (<%= race.distance %>) - <%= link_to t(:more_info), race.url, target: :_blank %>
     </p>
   <% end %>
