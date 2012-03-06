@@ -24,6 +24,9 @@ table{
     }
   }
 }
+p{
+  margin-top: 0px;
+}
 
 /*date with images*/
 .date_box { float:left; font-size:11px; font-weight:bold;  margin:0 12px 5px 0; text-align:center; width:77px;}
@@ -50,6 +53,10 @@ table{
   height: 40px;
   float: left;
   border: 1px solid black;
+}
+#available_votes .spacer{
+  width: 50px;
+  display: inline-block;
 }
 
 .clr{
