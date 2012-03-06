@@ -4,6 +4,7 @@ class Race < ActiveRecord::Base
 
   has_many :subscriptions
   has_many :users, :through => :subscriptions
+  has_many :votes
 
   scope :confirmed, where(state: :confirmed)
   scope :coming_next, where("date >= :date_today", :date_today => Date.today)

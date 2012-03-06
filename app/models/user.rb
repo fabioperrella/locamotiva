@@ -1,6 +1,7 @@
 class User < ActiveRecord::Base
 
   has_many :subscriptions
+  has_many :votes
   has_many :races, :through => :subscriptions
 
   # Include default devise modules. Others available are:

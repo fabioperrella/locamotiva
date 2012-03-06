@@ -31,4 +31,9 @@ FactoryGirl.define do
     user { FactoryGirl.create(:user) }
     shirt_size "P"
   end
+
+  factory :vote do
+    race { FactoryGirl.create(:race) }
+    user { FactoryGirl.create(:user) }
+  end
 end
