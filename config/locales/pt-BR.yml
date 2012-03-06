@@ -24,6 +24,7 @@
   old_races: "Corridas já realizadas"
   voting_for_month: "Votação para as corridas de %{month}"
   closed: encerrado
+  vote_created_sucessfull: "Voto registrado com sucesso"
 
   attributes:
     email: 'email'
