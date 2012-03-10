@@ -21,3 +21,4 @@ Resultados
 - resultados por corredor
 
 
+estou fazendo esquema para mostrar corridas que votou e nao, poder concelar voto etc..

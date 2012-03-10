@@ -3,6 +3,7 @@
 'pt-BR':
 
   vote: 'votar'
+  cancel_vote: 'cancelar voto'
   more_info: 'mais informações'
   not_registered_sign_up_here: "Não tem cadastro? Cadastre-se aqui"
   sign_up: 'Cadastro'
